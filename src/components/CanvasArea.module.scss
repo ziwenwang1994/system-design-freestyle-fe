@@ -1,0 +1,12 @@
+.canvasArea {
+    width: 100%;
+    min-height: calc(100vh - 16px);
+    border: 1px dashed #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}

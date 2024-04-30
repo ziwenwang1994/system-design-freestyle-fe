@@ -1,0 +1,89 @@
+// ResizableElement.module.scss
+.resizableArticle {
+    width: auto;
+    height: auto;
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .contentArea {
+        flex-grow: 1;
+        overflow-y: auto;
+        margin-bottom: 10px;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+
+        button {
+            padding: 8px 16px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+            }
+        }
+    }
+
+    .resizeHandle {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        background-color: #333;
+        border-radius: 50%;
+        cursor: nwse-resize;
+    }
+
+    .dragHandle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 20px;
+        background-color: #ccc;
+        text-align: center;
+        line-height: 20px; // Vertically center text in the drag handle
+    }
+
+    .removeButton {
+        position: absolute;
+        top: 5px; // Move closer to the top-right corner
+        right: 5px;
+        padding: 3px 6px; // Smaller padding
+        background-color: #dc3545; // Bootstrap's danger color for better recognition
+        color: white;
+        font-size: 12px; // Smaller font size
+        border: none;
+        border-radius: 50%; // Make it round
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px; // Fixed size for circle
+        height: 20px; // Fixed size for circle
+        line-height: 20px; // Align text vertically
+
+        &:hover {
+            background-color: #c82333; // A darker shade for hover
+        }
+    }
+}
